@@ -1,0 +1,63 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Africa Aid Summit</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Africa Aid Summit</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Contact Us</h2>
+    <p>We'd love to hear from you. Reach out with questions or suggestions.</p>
+  </section>
+
+  <section class="info">
+    <div class="card">
+      <h3>General Inquiries</h3>
+      <p>Email: info@africaaidsummit.org<br/>Phone: +234-000-0000</p>
+    </div>
+    <div class="card">
+      <h3>Event Team</h3>
+      <p>Email: events@africaaidsummit.org<br/>Phone: +234-111-1111</p>
+    </div>
+    <div class="card">
+      <h3>Message Us</h3>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="contactMessage"></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Africa Aid Summit. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const message = document.getElementById('contactMessage');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      message.textContent = 'Thank you! We have received your message.';
+      message.style.color = 'lightgreen';
+    });
+  </script>
+</body>
+</html>
